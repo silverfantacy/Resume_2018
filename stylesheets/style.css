@@ -51,12 +51,12 @@ hr {
   position: relative; }
 
 .left {
-  -ms-flex: 5;
-      flex: 5; }
+  -ms-flex: 6;
+      flex: 6; }
 
 .right {
-  -ms-flex: 7;
-      flex: 7; }
+  -ms-flex: 6;
+      flex: 6; }
 
 .left,
 .right {
@@ -64,7 +64,8 @@ hr {
 
 .left {
   padding-right: 50px;
-  border-right: solid 1px #E85A70; }
+  border-right: solid 1px #E85A70;
+  position: relative; }
 
 .right {
   padding-left: 50px;
@@ -79,7 +80,8 @@ hr {
   background-position: center;
   background-size: cover;
   position: absolute;
-  top: 50px; }
+  top: 0px;
+  right: 50px; }
 
 .decoration {
   width: 300px;
