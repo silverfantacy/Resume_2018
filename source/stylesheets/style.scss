@@ -62,11 +62,11 @@ hr {
 }
 
 .left {
-  flex: 5;
+  flex: 6;
 }
 
 .right {
-  flex: 7;
+  flex: 6;
 }
 
 .left,
@@ -77,6 +77,7 @@ hr {
 .left {
   padding-right: 50px;
   border-right: solid 1px $secondary;
+  position: relative;
 }
 
 .right {
@@ -93,7 +94,8 @@ hr {
   background-position: center;
   background-size: cover;
   position: absolute;
-  top: 50px;
+  top: 0px;
+  right: 50px;
 }
 
 .decoration {
