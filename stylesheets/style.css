@@ -48,7 +48,8 @@ hr {
   max-width: 950px;
   border: solid 8px #EAEAEA;
   padding: 50px;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .left {
   -ms-flex: 6;
