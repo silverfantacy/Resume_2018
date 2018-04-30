@@ -36,6 +36,10 @@ ul {
     border: 5px solid white;
     opacity: 1;
     transition: all .5s;
+    @include phone-width {
+      width: 200px;
+      height: 200px;
+    }
     &:hover {
       opacity: 1;
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.37), 0 0 40px rgba(0, 0, 0, 0.16) inset;
@@ -48,17 +52,18 @@ ul {
 }
 
 li span {
-  position: absolute;
-  top: -40px;
+  position: absolute; // top: -40px;
   top: 260px;
+  @include phone-width {
+    top: 215px;
+  }
 }
 
 .backBtn {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: $secondary;
-  // // background: linear-gradient( 135deg, #ED4264, #ffdde1);
+  background-color: $secondary; // // background: linear-gradient( 135deg, #ED4264, #ffdde1);
   width: 250px;
   height: 100px;
   font-weight: bold;
@@ -69,5 +74,8 @@ li span {
   transition: box-shadow .5s;
   &:hover {
     box-shadow: 0 1px 4px rgba(255, 255, 255, 0.27), 0 0 40px rgba(255, 255, 255, 0.06);
+  }
+  @include phone-width {
+    transform: rotate(-45deg) translate(-21%, -100%) scale(0.5);
   }
 }

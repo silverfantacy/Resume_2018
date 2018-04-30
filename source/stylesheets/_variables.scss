@@ -31,3 +31,33 @@ $danger: $red !default;
 $light: $gray-100 !default;
 $dark: $gray-800 !default;
 $basis: #EAEAEA !default;
+//先針對media queries的width設為變數
+$pc-media:1024px;
+$pad-media:768px;
+$phone-media:480px;
+/*把變數帶入mixin中，此mixin只就單純把media queries寫到我的mixin中，
+並且使用我上面設立的變數來調動media queries的width*/
+
+//電腦
+@mixin pc-width() {
+  @media all and (max-width: $pc-media) {
+    @content;
+  }
+}
+
+//平板
+@mixin pad-width() {
+  @media all and (max-width: $pad-media) {
+    @content;
+  }
+}
+
+//手機
+@mixin phone-width() {
+  @media all and (max-width: $phone-media) {
+    @content;
+  }
+}
+
+$pc-padding: 30px;
+$phone-padding: 10px;
