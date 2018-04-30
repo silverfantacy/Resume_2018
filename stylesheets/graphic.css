@@ -97,12 +97,21 @@ li span {
   /** Pad the lightbox image */
   max-width: 90%;
   max-height: 80%;
-  margin: 5%; }
+  margin: 5%;
+  animation: showIn .5s; }
 
 .lightbox:target {
   /** Remove default browser outline */
   outline: none;
   /** Unhide lightbox **/
   display: block; }
+
+@keyframes showIn {
+  from {
+    top: -100px;
+    opacity: 0; }
+  to {
+    top: 0px;
+    opacity: 1; } }
 
 /*# sourceMappingURL=graphic.css.map */
