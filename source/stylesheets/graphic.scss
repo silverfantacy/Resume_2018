@@ -79,3 +79,46 @@ li span {
     transform: rotate(-45deg) translate(-21%, -100%) scale(0.5);
   }
 }
+
+/** LIGHTBOX MARKUP **/
+
+// https://codepen.io/gschier/pen/HCoqh?editors=1100
+.lightbox {
+  /** Default lightbox to hidden */
+  display: none;
+  /** Position and style */
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox img {
+  /** Pad the lightbox image */
+  max-width: 90%;
+  max-height: 80%;
+  margin: 5%;
+  animation: showIn .5s;
+}
+
+.lightbox:target {
+  /** Remove default browser outline */
+  outline: none;
+  /** Unhide lightbox **/
+  display: block;
+}
+
+@keyframes showIn {
+  from {
+    top: -100px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
+}
