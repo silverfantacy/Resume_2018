@@ -1,3 +1,6 @@
+@charset "UTF-8";
+/*把變數帶入mixin中，此mixin只就單純把media queries寫到我的mixin中，
+並且使用我上面設立的變數來調動media queries的width*/
 h1 {
   display: block;
   width: 100%;
@@ -37,6 +40,10 @@ ul {
     border: 5px solid white;
     opacity: 1;
     transition: all .5s; }
+    @media all and (max-width: 480px) {
+      ul li {
+        width: 200px;
+        height: 200px; } }
     ul li:hover {
       opacity: 1;
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.37), 0 0 40px rgba(0, 0, 0, 0.16) inset;
@@ -46,8 +53,10 @@ ul {
 
 li span {
   position: absolute;
-  top: -40px;
   top: 260px; }
+  @media all and (max-width: 480px) {
+    li span {
+      top: 215px; } }
 
 .backBtn {
   position: absolute;
@@ -65,5 +74,9 @@ li span {
   transition: box-shadow .5s; }
   .backBtn:hover {
     box-shadow: 0 1px 4px rgba(255, 255, 255, 0.27), 0 0 40px rgba(255, 255, 255, 0.06); }
+  @media all and (max-width: 480px) {
+    .backBtn {
+      -ms-transform: rotate(-45deg) translate(-21%, -100%) scale(0.5);
+          transform: rotate(-45deg) translate(-21%, -100%) scale(0.5); } }
 
 /*# sourceMappingURL=graphic.css.map */
