@@ -1,4 +1,27 @@
 @import "_variables";
+.text-opacity {
+  opacity: 0.8;
+}
+
+.text-secondary {
+  color: $secondary;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.justify-content-start {
+  align-items: flex-start;
+}
 
 body {
   padding: 50px;
@@ -262,19 +285,27 @@ hr {
   top: 0;
 }
 
-// list program
 .listProgram {
-  .bar {
-    width: 150px;
-    height: 10px;
-    border: solid 2px $secondary;
-    border-radius: 5px;
-  }
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   li {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding-top: 10px;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+  i {
+    color: $basis;
+  }
+  span {
+    color: rgba($basis, .8);
   }
 }
 
@@ -334,7 +365,7 @@ hr {
   background-color: $secondary;
 }
 
-.listHover:hover>a:after {
+.listHover:hover>div a:after {
   content: '';
   display: block;
   position: absolute;
@@ -350,9 +381,23 @@ hr {
 
 @keyframes showHover {
   0% {
-    width: 0%;
+    width: 10%;
   }
   100% {
     width: 100%;
+  }
+}
+
+.listWork {
+  li {
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  a {
+    display: block;
+    position: relative;
+  }
+  h5 {
+    margin: 0;
   }
 }
