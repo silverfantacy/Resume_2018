@@ -1,6 +1,28 @@
 @charset "UTF-8";
 /*把變數帶入mixin中，此mixin只就單純把media queries寫到我的mixin中，
 並且使用我上面設立的變數來調動media queries的width*/
+.text-opacity {
+  opacity: 0.8; }
+
+.text-secondary {
+  color: #E85A70; }
+
+.d-flex {
+  display: -ms-flexbox;
+  display: flex; }
+
+.flex-column {
+  -ms-flex-direction: column;
+      flex-direction: column; }
+
+.flex-row {
+  -ms-flex-direction: row;
+      flex-direction: row; }
+
+.justify-content-start {
+  -ms-flex-align: start;
+      align-items: flex-start; }
+
 body {
   padding: 50px;
   display: -ms-flexbox;
@@ -246,20 +268,32 @@ hr {
   left: 0;
   top: 0; }
 
-.listProgram .bar {
-  width: 150px;
-  height: 10px;
-  border: solid 2px #E85A70;
-  border-radius: 5px; }
-
-.listProgram li {
+.listProgram {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  -ms-flex-align: center;
-      align-items: center;
-  padding-top: 10px; }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .listProgram li {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-bottom: 20px; }
+  .listProgram i {
+    color: #EAEAEA; }
+  .listProgram span {
+    color: rgba(234, 234, 234, 0.8); }
 
 .value {
   height: 100%;
@@ -304,7 +338,7 @@ hr {
 .fill {
   background-color: #E85A70; }
 
-.listHover:hover > a:after {
+.listHover:hover > div a:after {
   content: '';
   display: block;
   position: absolute;
@@ -318,8 +352,19 @@ hr {
 
 @keyframes showHover {
   0% {
-    width: 0%; }
+    width: 10%; }
   100% {
     width: 100%; } }
+
+.listWork li {
+  margin: 10px 0;
+  font-weight: bold; }
+
+.listWork a {
+  display: block;
+  position: relative; }
+
+.listWork h5 {
+  margin: 0; }
 
 /*# sourceMappingURL=style.css.map */
