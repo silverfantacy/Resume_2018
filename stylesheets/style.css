@@ -207,6 +207,8 @@ hr {
     padding-left: 10px;
     margin-left: 10px;
     border-left: solid 4px #EAEAEA; }
+  .listExperience > li .f2eLink img {
+    width: 100%; }
 
 .listSkill {
   display: -ms-flexbox;
