@@ -1,6 +1,9 @@
 @charset "UTF-8";
 /*把變數帶入mixin中，此mixin只就單純把media queries寫到我的mixin中，
 並且使用我上面設立的變數來調動media queries的width*/
+* {
+  box-sizing: border-box; }
+
 .text-opacity {
   opacity: 0.8; }
 
@@ -105,7 +108,7 @@ hr {
     .left {
       -ms-flex: none;
           flex: none;
-      width: 90%; } }
+      max-width: 100%; } }
 
 .right {
   -ms-flex: 6;
@@ -114,7 +117,7 @@ hr {
     .right {
       -ms-flex: none;
           flex: none;
-      width: 90%; } }
+      max-width: 100%; } }
 
 .left,
 .right {
@@ -196,13 +199,21 @@ hr {
   display: flex;
   margin-bottom: 10px; }
   .listExperience > li:nth-child(1) ul {
-    border-color: #ED4264; }
+    border-color: #ed264e; }
   .listExperience > li:nth-child(2) ul {
-    border-color: #F1617D; }
+    border-color: #ED4264; }
   .listExperience > li:nth-child(3) ul {
-    border-color: #F48096; }
+    border-color: #F1617D; }
   .listExperience > li:nth-child(4) ul {
+    border-color: #F48096; }
+  .listExperience > li:nth-child(5) ul {
     border-color: #F89FAF; }
+  .listExperience > li:nth-child(6) ul {
+    border-color: #fccbd4; }
+  .listExperience > li .year {
+    width: 40px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
   .listExperience > li ul {
     padding-left: 10px;
     margin-left: 10px;
@@ -216,7 +227,7 @@ hr {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
   .listSkill li {
-    width: 50%;
+    width: calc(100% /3);
     padding: 5px;
     box-sizing: border-box;
     display: -ms-flexbox;
@@ -286,12 +297,12 @@ hr {
         justify-content: space-between;
     -ms-flex-align: center;
         align-items: center;
-    width: 60px;
-    height: 60px;
+    width: calc((100% - 30px) / 4);
     padding: 10px;
     border-radius: 5px;
-    margin-left: 10px;
     margin-bottom: 20px; }
+    .listProgram li:last-child {
+      margin-right: auto; }
   .listProgram i {
     color: #EAEAEA; }
   .listProgram span {
@@ -332,15 +343,22 @@ hr {
 .value.p100v {
   width: 100%; }
 
+.buttons {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
 .btn {
   border: solid 3px #E85A70;
-  padding: 5px 20px;
-  margin-right: 10px; }
+  padding: 7px 17px;
+  margin-right: 10px;
+  line-height: initial; }
 
 .fill {
   background-color: #E85A70; }
 
-.listHover:hover > div a:after {
+.listHover:hover > div > a:after {
   content: '';
   display: block;
   position: absolute;
